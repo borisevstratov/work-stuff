@@ -9,6 +9,9 @@
 
 ## Skills
 
+- generate-changelog
+
 ```markdown
 Automatically create user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly release notes.
+@CHANGELOG.md
 ```
