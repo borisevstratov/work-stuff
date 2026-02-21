@@ -2,9 +2,16 @@
 
 ```markdown
 ### Git Usage
-- **NEVER AUTO-COMMIT**: Do not create git commits unless the user explicitly asks you to.
-- **NEVER AUTO-PUSH**: Do not push to remote repositories unless the user explicitly asks you to.
 - **Verification**: Always ask the user for permission before running any git commands that modify the repository state.
+- **Format:** `<TYPE>: <description>`
+- **Types (Uppercase only):**
+  - `FEAT`: New feature or functionality.
+  - `FIX`: Bug fix.
+  - `CHORE`: Maintenance, configuration, or dependency updates.
+  - `REFACTOR`: Code changes that neither fix a bug nor add a feature.
+  - `CI`: Changes to CI/CD configuration or scripts.
+  - `DOCS`: Documentation only changes.
+- **Description:** Always short, concise, and summary of changes.
 ```
 
 ## Skills
