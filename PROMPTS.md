@@ -2,6 +2,8 @@
 
 ```markdown
 ### Git Usage
+- **NEVER AUTO-COMMIT**: Do not create git commits unless the user explicitly asks you to.
+- **NEVER AUTO-PUSH**: Do not push to remote repositories unless the user explicitly asks you to.
 - **Verification**: Always ask the user for permission before running any git commands that modify the repository state.
 - **Format:** `<TYPE>: <description>`
 - **Types (Uppercase only):**
