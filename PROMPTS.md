@@ -16,6 +16,13 @@
 - **Description:** Always short, concise, and summary of changes.
 ```
 
+```markdown
+## MCP Usage
+When you need to search docs, use `context7` tools.
+
+If you are unsure how to do something, use `gh_grep` to search code examples from GitHub.
+```
+
 ## Skills
 
 - generate-changelog
@@ -24,3 +31,4 @@
 Automatically create user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly release notes.
 @CHANGELOG.md
 ```
+
