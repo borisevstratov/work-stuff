@@ -9,6 +9,7 @@ This repository contains a collection of specialized agent skills designed to en
 | **Create Specification** | `npx skills add https://github.com/borisevstratov/work-stuff/tree/master/skills/create-specification` |
 | **Generate Changelog** | `npx skills add https://github.com/borisevstratov/work-stuff/tree/master/skills/generate-changelog` |
 | **CTO Codebase Audit** | `npx skills add https://github.com/borisevstratov/work-stuff/tree/master/skills/cto-codebase-audit` |
+| **Make Release** | `npx skills add https://github.com/borisevstratov/work-stuff/tree/master/skills/make-release` |
 
 ## Reference
 
