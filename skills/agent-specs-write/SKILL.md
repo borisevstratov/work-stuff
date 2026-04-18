@@ -1,5 +1,5 @@
 ---
-name: create-specification
+name: agent-specs-write
 description: >
   Use this skill when asked to generate a technical specification for a feature or architectural change.
   Triggers include: "create a spec", "generate technical specification", "write a design doc",
@@ -22,7 +22,7 @@ This skill provides a structured workflow for generating high-quality technical 
 
 ## 2. Specification Template & Location
 
-- **Template**: Use the structure defined in `skills/create-specification/assets/SPEC_TEMPLATE.md`.
+- **Template**: Use the structure defined in `skills/agent-specs-write/assets/SPEC_TEMPLATE.md`.
 - **Location**: Save all specifications in `.agents/specs/` using the naming convention `YYYY-MM-DD_feature-name.md`.
 
 ---

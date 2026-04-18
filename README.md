@@ -4,9 +4,9 @@ This repository contains a collection of specialized agent skills designed to en
 
 ## Skills
 
-- **Create Specification**
+- **Agent Specs Write**
   ```bash
-  npx skills add borisevstratov/work-stuff/skills/create-specification
+  npx skills add borisevstratov/work-stuff/skills/agent-specs-write
   ```
 - **Generate Changelog**
   ```bash
