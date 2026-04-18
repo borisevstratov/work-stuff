@@ -8,6 +8,10 @@ This repository contains a collection of specialized agent skills designed to en
   ```bash
   npx skills add borisevstratov/work-stuff/skills/agent-specs-write
   ```
+- **Agent Memory Save**
+  ```bash
+  npx skills add borisevstratov/work-stuff/skills/agent-memory-save
+  ```
 - **Generate Changelog**
   ```bash
   npx skills add borisevstratov/work-stuff/skills/generate-changelog
