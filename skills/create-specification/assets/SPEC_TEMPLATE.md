@@ -40,12 +40,22 @@ Definitions for database tables, Strapi content types, or core interfaces.
 - **Key Fields**:
     - `field_name`: `Type` - Description.
 
-### 4.2. Typings (JSDoc / TypeScript)
+### 4.2. Typings (JSDoc or TypeScript)
+*Note: Use either JSDoc or TypeScript. Do not mix them in the same specification.*
+
+#### JavaScript (JSDoc)
 ```javascript
 /**
  * @typedef {Object} IEntityName
  * @property {string} uid
  */
+```
+
+#### TypeScript
+```typescript
+interface IEntityName {
+  uid: string;
+}
 ```
 
 ## 5. Logic Flow
