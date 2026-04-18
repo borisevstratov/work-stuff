@@ -22,14 +22,23 @@ This repository contains a collection of specialized agent skills designed to en
   ```
 - **Make Release**
   ```bash
-npx skills add borisevstratov/work-stuff/skills/make-release
-   ```
+  npx skills add borisevstratov/work-stuff/skills/make-release
+  ```
+
+## Reference
+
+### [Prompts](PROMPTS.md)
+- [Git Usage](PROMPTS.md#git-usage)
+- [MCP Usage](PROMPTS.md#mcp-usage)
+
+### [Commands](COMMANDS.md)
+- [Git branches cleanup](COMMANDS.md#git-branches-cleanup)
 
 ## Context Routing
 
-This project follows the context routing patterns inspired by [dotagents](https://github.com/bgreenwell/dotagents).
+Inspired by [bgreenwell/dotagents](https://github.com/bgreenwell/dotagents).
 
-```
+```text
 .
 ├── AGENTS.md             # Entry point & router (Required)
 └── .agents/              # Recommended context directory
@@ -52,14 +61,6 @@ This project follows the context routing patterns inspired by [dotagents](https:
     │       └── scripts/
     │           └── migrate.sh
     └── specs/            # Current task requirements
-        └── feature_x.md 
+        └── feature_x.md
 ```
 
-## Reference
-
-### [Prompts](PROMPTS.md)
-- [Git Usage](PROMPTS.md#git-usage)
-- [MCP Usage](PROMPTS.md#mcp-usage)
-
-### [Commands](COMMANDS.md)
-- [Git branches cleanup](COMMANDS.md#git-branches-cleanup)
