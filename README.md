@@ -1,6 +1,6 @@
 # work-stuff
 
-This repository contains a collection of specialized agent skills designed to enhance productivity and automate common engineering workflows.
+This is how i work.
 
 ## Skills
 
