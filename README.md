@@ -6,19 +6,19 @@ This repository contains a collection of specialized agent skills designed to en
 
 - **Create Specification**
   ```bash
-  npx skills add https://github.com/borisevstratov/work-stuff/tree/master/skills/create-specification
+  npx skills add borisevstratov/work-stuff/skills/create-specification
   ```
 - **Generate Changelog**
   ```bash
-  npx skills add https://github.com/borisevstratov/work-stuff/tree/master/skills/generate-changelog
+  npx skills add borisevstratov/work-stuff/skills/generate-changelog
   ```
 - **CTO Codebase Audit**
   ```bash
-  npx skills add https://github.com/borisevstratov/work-stuff/tree/master/skills/cto-codebase-audit
+  npx skills add borisevstratov/work-stuff/skills/cto-codebase-audit
   ```
 - **Make Release**
   ```bash
-  npx skills add https://github.com/borisevstratov/work-stuff/tree/master/skills/make-release
+  npx skills add borisevstratov/work-stuff/skills/make-release
   ```
 
 ## Reference
