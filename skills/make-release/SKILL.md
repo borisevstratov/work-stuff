@@ -1,13 +1,6 @@
 ---
 name: make-release
-description: >
-  Runs the full release pipeline for npm projects using CalVer versioning. ONLY
-  triggers when the user types the exact slash command `/make-release`. Do NOT
-  trigger for general changelog questions, version inquiries, or casual mentions
-  of releasing. When `/make-release` is issued: reads git history since the last
-  release, determines whether this is a major (new year/month) or patch bump,
-  runs `npm version` with the computed CalVer string, and prepends a new
-  business-oriented entry to CHANGELOG.md.
+description: Run the full CalVer release pipeline for npm projects.
 ---
 
 # make-release
@@ -15,8 +8,6 @@ description: >
 Full release pipeline for npm projects versioned with CalVer.
 
 **Trigger:** Only the exact user command `/make-release`. Ignore all other phrasings.
-
----
 
 ## CalVer Format
 
@@ -29,8 +20,6 @@ YYYY.M.PATCH
 - `PATCH` — incrementing integer starting at `0`, resets to `0` on new month/year
 
 **Examples:** `2026.3.0`, `2026.3.1`, `2026.4.0`
-
----
 
 ## Step 1 — Preflight checks
 
@@ -52,8 +41,6 @@ git tag --sort=-version:refname | head -5
 If `NO_PACKAGE_JSON` → abort and tell the user this skill is for npm projects only.  
 If `NOT_GIT_REPO` → abort and ask for the correct directory.  
 If `DIRTY_WORKING_TREE` → warn the user and ask whether to proceed anyway.
-
----
 
 ## Step 2 — Determine the new CalVer version
 
@@ -80,8 +67,6 @@ CUR_PATCH=$(echo $CURRENT | cut -d. -f3)
 
 Compute and display the proposed version before doing anything else.
 
----
-
 ## Step 3 — Analyze changes since last release
 
 ```bash
@@ -100,8 +85,6 @@ Also check for file-level changes to understand scope:
 ```bash
 git diff "$LAST_TAG"..HEAD --stat 2>/dev/null | tail -5
 ```
-
----
 
 ## Step 4 — Write business-oriented changelog entries
 
@@ -134,8 +117,6 @@ Categorize entries into sections (only include sections that have entries):
 ### Removed
 ```
 
----
-
 ## Step 5 — Show the release plan and confirm
 
 Present a clear summary **before making any changes**:
@@ -160,8 +141,6 @@ Proceed with release? (yes / adjust entries / cancel)
 ```
 
 Wait for explicit confirmation before continuing.
-
----
 
 ## Step 6 — Execute the release
 
@@ -212,8 +191,6 @@ git commit -m "chore: release <NEW_VERSION>"
 git tag <NEW_VERSION>
 ```
 
----
-
 ## Step 7 — Report completion
 
 ```
@@ -227,8 +204,6 @@ Next: git push && git push --tags
 ```
 
 Remind the user to push the commit and tags if they haven't set up automatic pushing.
-
----
 
 ## Edge Cases
 

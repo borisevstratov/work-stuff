@@ -1,20 +1,11 @@
 ---
 name: cto-codebase-audit
-description: >
-  Use this skill whenever a user wants to audit their engineering team's velocity, code quality, or development process.
-  Triggers include: "review our repo", "analyze our team's speed", "find bottlenecks in our dev process",
-  "audit our codebase", "how is our team performing", "are we shipping fast enough", "code review across branches",
-  "check our commit history", "engineering health check", "developer productivity audit", or any request to
-  assess the state of a codebase and the team producing it. Also trigger when a CTO, lead dev, or engineering
-  manager wants a high-level view of code quality, team cadence, or rework/churn patterns. Use this skill
-  even if they phrase it casually — e.g., "is our codebase a mess?" or "why are we so slow?"
+description: Audit engineering velocity, code quality, and team process by analyzing git history and repository activity.
 ---
 
-# CTO / Lead Dev Audit Skill
+# cto-codebase-audit
 
 A structured workflow for analyzing a Git repository's recent activity to surface team velocity, code quality signals, bottleneck patterns, and actionable improvement recommendations — from a senior engineering leadership perspective.
-
----
 
 ## 1. Setup & Data Collection
 
@@ -59,8 +50,6 @@ git log --all --since="14 days ago" \
   | tee /tmp/diff_stats.txt
 ```
 
----
-
 ## 2. Velocity Analysis
 
 Compute and report the following metrics. See `references/metrics.md` for formulas and interpretation guidance.
@@ -78,8 +67,6 @@ Flag if:
 - Any developer has **0 commits** in the window → potential blocker or absence
 - Avg commit size > **500 LOC** → likely not enough decomposition
 - Branch age > **5 days** before any merge activity → integration risk
-
----
 
 ## 3. Rework & Churn Detection
 
@@ -120,8 +107,6 @@ git log --all --since="14 days ago" --diff-filter=M --name-only --pretty=format:
 
 Flag any file that appears in a **modify → revert → modify** sequence within the window.
 
----
-
 ## 4. Code Quality Pillars
 
 For each changed file in the window, assess against these pillars. Use `git diff` output and heuristics. Read `references/quality-rubric.md` for scoring guidance.
@@ -137,8 +122,6 @@ For each changed file in the window, assess against these pillars. Use `git diff
 | **Testability** | No tests added alongside new logic, test coverage clearly not updated |
 
 Score each area **Red / Amber / Green** in the final report.
-
----
 
 ## 5. Commit Message Quality
 
@@ -159,8 +142,6 @@ Report:
 - % of commits rated Good / Acceptable / Poor
 - Named examples of best and worst messages (without shaming individuals)
 
----
-
 ## 6. Team Dynamics Signals
 
 Derive team health signals from the data — without needing 1:1s.
@@ -179,8 +160,6 @@ git log --all --since="14 days ago" --pretty=format:'%an' --name-only \
   | awk 'NF==1{author=$0} NF>1{print $0, author}' \
   | sort | uniq -c | sort -rn | head -30
 ```
-
----
 
 ## 7. Output Report Structure
 
@@ -234,8 +213,6 @@ Overall rating: 🟢 Healthy / 🟡 Needs Attention / 🔴 At Risk
 One paragraph summary and top priority for next sprint.
 ```
 
----
-
 ## 8. Tone & Delivery Guidelines
 
 - **Be direct but not brutal.** Name problems clearly; don't bury them in qualifications.
@@ -244,8 +221,6 @@ One paragraph summary and top priority for next sprint.
 - **Lead with what matters most.** Bury nitpicks. Surface blockers and risks first.
 - **Give credit.** If velocity is strong or a module is well-structured, say so explicitly.
 - **Be specific.** Vague feedback ("code could be cleaner") is worthless. Point to evidence.
-
----
 
 ## Reference Files
 
