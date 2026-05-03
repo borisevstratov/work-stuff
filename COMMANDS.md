@@ -11,3 +11,17 @@ Now you can just run:
 ```bash
 git cleanup
 ```
+
+## Update npm packages
+
+```bash
+npx -y npm-check-updates --format group --interactive --packageManager npm
+bunx -y npm-check-updates --format group --interactive --packageManager buna
+```
+
+You can make aliases for that
+
+```bash
+alias ncu='npx -y npm-check-updates --format group --interactive --packageManager npm'
+alias bcu='bunx -y npm-check-updates --format group --interactive --packageManager bun'
+```
