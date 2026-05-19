@@ -16,7 +16,7 @@ git cleanup
 
 ```bash
 npx -y npm-check-updates --format group --interactive --packageManager npm
-bunx -y npm-check-updates --format group --interactive --packageManager buna
+bunx -y npm-check-updates --format group --interactive --packageManager bun
 ```
 
 You can make aliases for that
